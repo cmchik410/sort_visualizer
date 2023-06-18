@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sorter</title>
+        <link 
+            rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer" 
+        />
+        <link rel="stylesheet" href="./styles/style.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Try different sorting algorithms !</h1>
+        </header>
+
+        <form>
+            <input type="text" placeholder="Input a number array that split by comma" value="4,2,5,1,3"required />
+            <button type="submit" class="submit">
+                Enter
+            </button>
+
+            <button type="submit" class="play">
+                <i class="fa-solid fa-play"></i>
+            </button>
+        </form>
+        
+        <div class="mode">
+            <select name="algorithms">
+                <option value="bubble">Bubble Sort</option>
+                <option value="merge">Merge Sort</option>
+            </select>
+
+            <button class="asc" title="Sort in ascending" type="submit" />
+                <i class="fa-solid fa-arrow-up-short-wide"></i>
+            </button>
+    
+            <button class="des" title="Sort in descending" type="submit">
+                <i class="fa-solid fa-arrow-up-wide-short"></i>
+            </button>
+        </div>
+
+        <section class="board">
+
+        </section>
+
+        <p class="result"></p>
+        
+    </body>
+    <script src="./src/draw.js"></script>
+    <script src="./src/alg.js"></script>
+    <script src="./main.js"></script>
+</html>
