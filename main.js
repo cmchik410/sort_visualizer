@@ -41,7 +41,7 @@ play.addEventListener("click", e => {
 
     let sorted_array = [];
 
-    arr = bubble_sort(barArray);
+    let arr = bubble_sort(barArray);
 
     for (let i = 0; i < arr.length; ++i) {
         sorted_array.push(arr[i].getAttribute("title"));
