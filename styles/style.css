@@ -122,12 +122,8 @@ section div.bar {
   color: white;
 }
 
-section div.bar.activate1 {
+section div.bar.activate {
   background-color: greenyellow;
-}
-
-section div.bar.activate2 {
-  background-color: lightsalmon;
 }
 
 .result {

@@ -6,8 +6,7 @@ let submit = document.querySelector(".submit");
 
 let sort = document.querySelector(".sort");
 
-let delay = 300;
-
+let delay = 800;
 
 submit.addEventListener("click", e => {
     e.preventDefault();
@@ -20,21 +19,23 @@ submit.addEventListener("click", e => {
         nums[idx] = Number(nums[idx]);
     })
 
-    if (nums.length > 20) {
+    if (nums.length > 15) {
         alert("Too much element");
         return;
     }
 
-    initialize(nums);
+    init(nums);
 })
 
 sort.addEventListener("click", e => {
     e.preventDefault();
+
     let barArray = board.childNodes;
 
     if (barArray[0].nodeType == 3) {
         barArray[0].remove();
     }
+
     let n = barArray.length;
 
     let mode = document.querySelector(".algorithms").value;
@@ -46,6 +47,5 @@ sort.addEventListener("click", e => {
         case "merge":
             break;
     }
-
 })
 

@@ -11,7 +11,7 @@ function create_bar(x, max_val, max_h, max_w) {
     return bar;
 }
 
-function initialize(nums) {
+function init(nums) {
     clearBoard();
 
     let max_h = Math.floor(board.clientHeight * 0.8);
