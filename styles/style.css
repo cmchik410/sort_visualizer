@@ -47,6 +47,13 @@ form {
           align-items: center;
 }
 
+form select {
+  border: none;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.75rem;
+  margin: 0.3rem;
+}
+
 form input,
 form button {
   border: none;
@@ -78,17 +85,10 @@ div.mode {
           align-items: center;
 }
 
-div.mode select {
+div.mode .sort {
   border: none;
   padding: 0.25rem 0.5rem;
-  font-size: 1.75rem;
-  margin: 0.3rem;
-}
-
-div.mode button {
-  border: none;
-  padding: 0.25rem 0.5rem;
-  font-size: 1.75rem;
+  font-size: 2.5rem;
   margin: 0.3rem;
 }
 

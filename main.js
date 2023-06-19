@@ -4,18 +4,15 @@ let result = document.querySelector(".result");
 
 let submit = document.querySelector(".submit");
 
-let asc = document.querySelector(".asc");
+let sort = document.querySelector(".sort");
 
-let des = document.querySelector(".des");
+let delay = 300;
 
-let play = document.querySelector(".play");
-
-let nums = null;
 
 submit.addEventListener("click", e => {
     e.preventDefault();
 
-    nums = e.target.parentElement.children[0].value;
+    let nums = e.target.parentElement.children[0].value;
 
     nums = nums.split(",");
 
@@ -31,22 +28,24 @@ submit.addEventListener("click", e => {
     initialize(nums);
 })
 
-play.addEventListener("click", e => {
+sort.addEventListener("click", e => {
     e.preventDefault();
     let barArray = board.childNodes;
 
     if (barArray[0].nodeType == 3) {
         barArray[0].remove();
     }
+    let n = barArray.length;
 
-    let sorted_array = [];
+    let mode = document.querySelector(".algorithms").value;
 
-    let arr = bubble_sort(barArray);
-
-    for (let i = 0; i < arr.length; ++i) {
-        sorted_array.push(arr[i].getAttribute("title"));
+    switch (mode) {
+        case "bubble":
+            bubbleSort(barArray, 0, 0, n, delay);
+            break;
+        case "merge":
+            break;
     }
 
-    result.innerHTML = sorted_array;
-
 })
+

@@ -1,10 +1,13 @@
-function create_bar(x, max_val, max_h, max_w) {    
+function create_bar(x, max_val, max_h, max_w) {
+    let text = document.createElement("p");
+
     let bar = document.createElement("div");
     bar.classList.add("bar");
     bar.title = x;
     bar.style.height = (Math.floor(max_h * x / max_val)).toString() + "px";
     bar.style.width = max_w.toString() + "px";
 
+    bar.appendChild(text);
     return bar;
 }
 
